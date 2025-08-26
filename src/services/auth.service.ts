@@ -15,28 +15,28 @@ export class AuthService {
       name: 'Omar Hatem',
       email: 'omar@gmail.com',
       password: 'omar123',
-      watchlist: ['el 7arefa', 'welad rizk']
+      watchlist: []
     },
     {
       id: 2,
       name: 'Anas Mahmoud',
       email: 'anas@hotmail.com',
       password: 'anas123',
-      watchlist: ['Spiderman', 'Avengers: Endgame']
+      watchlist: []
     },
     {
       id: 3,
       name: 'Arwa Hazem',
       email: 'arwa@yahoo.com',
       password: 'arwa123',
-      watchlist: ['Interstellar', 'Inception']
+      watchlist: []
     },
     {
       id: 4,
       name: 'Admin User',
       email: 'admin@admin.com',
       password: 'admin123',
-      watchlist: ['Interstellar', 'Avengers: Endgame']
+      watchlist: []
     }
   ];
 
