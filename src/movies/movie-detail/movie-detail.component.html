@@ -1,1 +1,50 @@
-<p>movie-detail works!</p>
+<div class="container mt-4" *ngIf="movie">
+    <div class="card bg-dark text-light shadow-lg rounded-4 p-4">
+        <h2 class="card-title text-center mb-3">
+            <i class="fa-solid fa-film me-2"></i>{{ movie.title }}
+        </h2>
+        <hr class="border-light">
+
+        <div class="row g-3">
+            <!-- Poster -->
+            <div class="col-md-4 text-center mb-3">
+                <img [src]="movie.posterUrl" alt="{{ movie.title }}"
+                    class="img-fluid rounded border border-secondary shadow-sm">
+            </div>
+
+            <!-- Details -->
+            <div class="col-md-8">
+                <p>
+                    <i class="fa-solid fa-circle-info me-2"></i>
+                    <strong>Full Description:</strong> {{ movie.description }}
+                </p>
+                <p>
+                    <i class="fa-solid fa-calendar me-2"></i>
+                    <strong>Release Year:</strong> {{ movie.releaseYear }}
+                </p>
+                <p>
+                    <i class="fa-solid fa-user me-2"></i>
+                    <strong>Director:</strong> {{ movie.director }}
+                </p>
+                <p>
+                    <i class="fa-solid fa-star me-2 text-warning"></i>
+                    <strong>Rating:</strong> {{ movie.rating }} |
+                    <i class="fa-solid fa-tags ms-2 me-2"></i>
+                    <strong>Category:</strong> {{ movie.category }}
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-4 text-center">
+            <button class="btn btn-outline-light" [routerLink]="['movies']">
+                <i class="fa-solid fa-arrow-left me-2"></i>Back to Movies
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Loading or no movie found -->
+<div *ngIf="!movie" class="text-center mt-5 text-light">
+    <i class="fa-solid fa-spinner fa-spin me-2"></i>
+    Loading movie details or movie not found...
+</div>
